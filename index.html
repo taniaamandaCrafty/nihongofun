@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nihongo Fun — Belajar Bahasa Jepang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="petals" aria-hidden="true">✿　🌸　✿　　 🌸　　 ✿　🌸</div>
+<header class="topbar">
+  <a class="brand" href="#" onclick="showPage('home');return false;"><span class="brand-icon">あ</span><span>Nihongo <b>Fun!</b></span></a>
+  <div class="top-actions"><span class="class-pill">Kelas VII SMP</span><button class="icon-btn" aria-label="Pengaturan" onclick="toggleTheme()">☼</button></div>
+</header>
+<main>
+  <section id="home" class="page active">
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">🌸 はじめましょう · Ayo mulai!</span>
+        <h1>Yuk, Kenalan<br>dengan <em>Huruf Jepang!</em></h1>
+        <p>Petualangan seru mengenal Hiragana, Katakana, dan Kanji. Belajar sedikit demi sedikit, lalu buktikan kemampuanmu lewat game!</p>
+        <button class="primary-btn" onclick="showPage('menu')">Mulai Belajar <span>➜</span></button>
+        <div class="hero-stats"><span>📚 6 materi</span><span>🎮 Game seru</span><span>⭐ Kuis interaktif</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="sun"></div><div class="cloud cloud1"></div><div class="cloud cloud2"></div>
+        <div class="fuji"><div class="snow"></div></div>
+        <div class="torii"><i></i><b></b><span></span><span></span></div>
+        <div class="sakura sakura1">🌸</div><div class="sakura sakura2">🌸</div>
+        <div class="mascot">🐱</div>
+        <div class="chibi"><div class="hair"></div><div class="face"><i></i><i></i><b></b></div><div class="body"></div><div class="bag">🎒</div></div>
+        <div class="floating-card">こんにちは！<small>Konnichiwa · Halo!</small></div>
+      </div>
+    </div>
+    <h2 class="section-title">Pilih petualanganmu <span>✿</span></h2>
+    <div class="menu-grid">
+      <button class="menu-card pink" onclick="showPage('intro')"><span class="card-icon">あ</span><b>Mengenal 3 Sistem Tulisan</b><small>Hiragana · Katakana · Kanji</small><span class="card-arrow">↗</span></button>
+      <button class="menu-card blue" onclick="showPage('hiragana')"><span class="card-icon">あ</span><b>Belajar Hiragana</b><small>Huruf dasar dan bunyinya</small><span class="card-arrow">↗</span></button>
+      <button class="menu-card purple" onclick="showPage('katakana')"><span class="card-icon">ア</span><b>Belajar Katakana</b><small>Kata serapan dan nama asing</small><span class="card-arrow">↗</span></button>
+      <button class="menu-card green" onclick="showPage('kanji')"><span class="card-icon">山</span><b>Yuk, Belajar Kanji</b><small>Huruf yang punya makna</small><span class="card-arrow">↗</span></button>
+      <button class="menu-card yellow" onclick="showPage('vocab')"><span class="card-icon">本</span><b>Kosakata Jepang</b><small>Kata sehari-hari</small><span class="card-arrow">↗</span></button>
+      <button class="menu-card orange" onclick="showPage('game')"><span class="card-icon">🎮</span><b>Game Tebak Huruf</b><small>Main sambil belajar</small><span class="card-arrow">↗</span></button>
+    </div>
+    <div class="quote-banner"><span>💌</span><div><b>Small steps, big progress!</b><p>Satu huruf yang kamu pelajari hari ini adalah langkah baru menuju bahasa Jepang.</p></div><span class="quote-jp">がんばって！</span></div>
+  </section>
+
+  <section id="menu" class="page">
+    <button class="back" onclick="showPage('home')">← Kembali ke beranda</button>
+    <div class="page-heading"><span class="eyebrow">YOUR LEARNING JOURNEY</span><h1>Menu Utama <span>🌸</span></h1><p>Pilih materi yang ingin kamu pelajari hari ini.</p></div>
+    <div class="menu-grid large">
+      <button class="menu-card pink" onclick="showPage('intro')"><span class="card-icon">📖</span><b>Apa itu huruf Jepang?</b><small>Kenali tiga sistem tulisan</small></button>
+      <button class="menu-card blue" onclick="showPage('hiragana')"><span class="card-icon">あ</span><b>Hiragana</b><small>Huruf dasar Jepang</small></button>
+      <button class="menu-card purple" onclick="showPage('katakana')"><span class="card-icon">ア</span><b>Katakana</b><small>Kata serapan</small></button>
+      <button class="menu-card green" onclick="showPage('kanji')"><span class="card-icon">山</span><b>Kanji</b><small>Karakter bermakna</small></button>
+      <button class="menu-card yellow" onclick="showPage('vocab')"><span class="card-icon">🍡</span><b>Kosakata</b><small>Bahasa Jepang sehari-hari</small></button>
+      <button class="menu-card orange" onclick="showPage('game')"><span class="card-icon">🎯</span><b>Game & Kuis</b><small>Uji pemahamanmu</small></button>
+      <button class="menu-card pink" onclick="showPage('summary')"><span class="card-icon">⭐</span><b>Kesimpulan</b><small>Rangkuman materi</small></button>
+    </div>
+  </section>
+
+  <section id="intro" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">MATERI 01</span><h1>Apa itu Hiragana, Katakana, dan Kanji?</h1><p>Bahasa Jepang memiliki tiga sistem tulisan utama yang sering digunakan bersama.</p></div>
+    <div class="system-list">
+      <article class="system-card pink"><div class="big-char">あ</div><div><h3>Hiragana <small>ひらがな</small></h3><p>Digunakan untuk banyak kata asli Jepang, partikel, dan akhiran tata bahasa.</p><div class="example">Contoh: ねこ (neko) = kucing</div></div></article>
+      <article class="system-card blue"><div class="big-char">ア</div><div><h3>Katakana <small>カタカナ</small></h3><p>Sering digunakan untuk kata serapan, nama asing, dan penekanan tertentu.</p><div class="example">Contoh: テレビ (terebi) = televisi</div></div></article>
+      <article class="system-card green"><div class="big-char">山</div><div><h3>Kanji <small>漢字</small></h3><p>Karakter yang membawa makna dan dapat memiliki beberapa cara baca.</p><div class="example">Contoh: 山 (yama) = gunung</div></div></article>
+    </div>
+    <div class="tip">💡 <b>Tips mengingat:</b> Hiragana untuk banyak kata dan tata bahasa, Katakana untuk banyak kata serapan, sedangkan Kanji membawa makna.</div>
+    <button class="primary-btn" onclick="showPage('hiragana')">Lanjut belajar Hiragana ➜</button>
+  </section>
+
+  <section id="hiragana" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">MATERI 02</span><h1>Yuk, kenalan dengan Hiragana! 🌷</h1><p>Hiragana adalah salah satu langkah pertama untuk mulai membaca bahasa Jepang.</p></div>
+    <div class="kana-grid" id="hiraganaGrid"></div>
+    <div class="tip">🔊 Klik kartu huruf untuk melihat bunyinya. Coba baca dari kiri ke kanan!</div>
+    <button class="primary-btn" onclick="showPage('katakana')">Lanjut ke Katakana ➜</button>
+  </section>
+
+  <section id="katakana" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">MATERI 03</span><h1>Yuk, mengenal Katakana! 💗</h1><p>Bentuknya berbeda dari Hiragana, tetapi bunyi dasarnya berpasangan.</p></div>
+    <div class="kana-grid" id="katakanaGrid"></div>
+    <h3 class="subheading">Contoh kata serapan</h3>
+    <div class="vocab-grid">
+      <div class="vocab-card"><b>コーヒー</b><span>koohii</span><small>☕ Kopi</small></div>
+      <div class="vocab-card"><b>パン</b><span>pan</span><small>🍞 Roti</small></div>
+      <div class="vocab-card"><b>テレビ</b><span>terebi</span><small>📺 Televisi</small></div>
+      <div class="vocab-card"><b>アイス</b><span>aisu</span><small>🍦 Es krim</small></div>
+    </div>
+    <div class="tip">✨ Tanda ー pada コーヒー menunjukkan bunyi vokal yang dipanjangkan.</div>
+    <button class="primary-btn" onclick="showPage('kanji')">Lanjut ke Kanji ➜</button>
+  </section>
+
+  <section id="kanji" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">MATERI 04</span><h1>Yuk, belajar Kanji! ⛰️</h1><p>Kanji adalah karakter yang memiliki makna. Cara bacanya bisa berubah sesuai kata dan konteks.</p></div>
+    <div class="kanji-grid">
+      <div class="kanji-card"><b>山</b><span>yama</span><small>⛰️ Gunung</small></div><div class="kanji-card"><b>川</b><span>kawa</span><small>🌊 Sungai</small></div>
+      <div class="kanji-card"><b>日</b><span>hi / nichi</span><small>☀️ Matahari / hari</small></div><div class="kanji-card"><b>月</b><span>tsuki / getsu</span><small>🌙 Bulan</small></div>
+      <div class="kanji-card"><b>木</b><span>ki / moku</span><small>🌳 Pohon / kayu</small></div><div class="kanji-card"><b>水</b><span>mizu / sui</span><small>💧 Air</small></div>
+      <div class="kanji-card"><b>火</b><span>hi / ka</span><small>🔥 Api</small></div><div class="kanji-card"><b>人</b><span>hito / jin</span><small>🧑 Orang</small></div>
+    </div>
+    <h3 class="subheading">Contoh Kanji dalam kata</h3><div class="tip">🇯🇵 日本 (Nihon) = Jepang · 学校 (gakkou) = sekolah · 先生 (sensei) = guru · 日本語 (Nihongo) = bahasa Jepang</div>
+    <button class="primary-btn" onclick="showPage('vocab')">Lanjut ke kosakata ➜</button>
+  </section>
+
+  <section id="vocab" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">MATERI 05</span><h1>Kosakata Jepang sehari-hari 🍡</h1><p>Yuk, mulai mengenal kata yang bisa dipakai saat menyapa teman atau di sekolah.</p></div>
+    <div class="vocab-list">
+      <div><b>こんにちは</b><span>Konnichiwa</span><small>Halo / selamat siang</small></div><div><b>ありがとう</b><span>Arigatou</span><small>Terima kasih</small></div>
+      <div><b>おはよう</b><span>Ohayou</span><small>Selamat pagi (informal)</small></div><div><b>せんせい</b><span>Sensei</span><small>Guru</small></div>
+      <div><b>がっこう</b><span>Gakkou</span><small>Sekolah</small></div><div><b>ともだち</b><span>Tomodachi</span><small>Teman</small></div>
+      <div><b>ほん</b><span>Hon</span><small>Buku</small></div><div><b>ねこ</b><span>Neko</span><small>Kucing</small></div>
+    </div>
+    <button class="primary-btn" onclick="showPage('game')">Ayo main game! 🎮</button>
+  </section>
+
+  <section id="game" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">LET'S PLAY!</span><h1>Game: Tebak Arti Huruf 🎮</h1><p>Pilih jawaban yang menurutmu benar. Siap?</p></div>
+    <div class="game-box"><div class="game-progress"><span id="gameCount">Pertanyaan 1 dari 5</span><span id="gameScore">⭐ Skor: 0</span></div><div class="progress"><i id="gameBar"></i></div><div class="game-char" id="gameChar">山</div><p class="game-question" id="gameQuestion">Apa arti Kanji ini?</p><div class="answer-grid" id="gameAnswers"></div><div id="gameFeedback" class="feedback" aria-live="polite"></div><button id="gameNext" class="primary-btn hidden" onclick="nextGame()">Soal berikutnya ➜</button></div>
+  </section>
+
+  <section id="summary" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">RECAP TIME</span><h1>Kesimpulan pembelajaran 🌸</h1><p>Yeay, kamu sudah mengenal dasar-dasar tulisan Jepang!</p></div>
+    <div class="system-list">
+      <article class="system-card pink"><div class="big-char">あ</div><div><h3>Hiragana</h3><p>Banyak digunakan untuk kata asli Jepang, partikel, dan akhiran tata bahasa.</p></div></article>
+      <article class="system-card blue"><div class="big-char">ア</div><div><h3>Katakana</h3><p>Sering digunakan untuk kata serapan dan nama asing.</p></div></article>
+      <article class="system-card green"><div class="big-char">山</div><div><h3>Kanji</h3><p>Karakter yang membawa makna, misalnya 山 (yama) berarti gunung.</p></div></article>
+    </div>
+    <div class="quote-banner"><span>🌸</span><div><b>ありがとう！ Arigatou!</b><p>Terima kasih sudah belajar. Terus berlatih, satu huruf setiap hari!</p></div><span class="quote-jp">がんばって！</span></div>
+    <button class="primary-btn" onclick="showPage('quiz')">Kerjakan kuis akhir ➜</button>
+  </section>
+
+  <section id="quiz" class="page lesson">
+    <button class="back" onclick="showPage('menu')">← Menu utama</button>
+    <div class="page-heading"><span class="eyebrow">FINAL QUIZ</span><h1>Kuis akhir: Uji kemampuanmu! 📝</h1><p>Jawab 8 pertanyaan dan lihat hasil belajarmu.</p></div>
+    <div id="quizBox" class="game-box"></div>
+  </section>
+</main>
+<footer><span>🌸 Nihongo Fun!</span><span>Belajar · Bermain · Bertumbuh</span></footer>
+<script src="script.js"></script>
+</body>
+</html>
